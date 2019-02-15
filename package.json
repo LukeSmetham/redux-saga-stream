@@ -1,7 +1,7 @@
 {
   "name": "redux-saga-stream",
-  "version": "0.0.1",
-  "description": "Integrate GetStream.io into redux-saga",
+  "version": "0.0.11",
+  "description": "redux-saga integration for stream",
   "main": "dist/index.js",
   "scripts": {
     "del": "rimraf dist",
@@ -28,13 +28,15 @@
     "@babel/plugin-transform-runtime": "7.2.0",
     "@babel/preset-env": "7.2.3",
     "babel-core": "^7.0.0-bridge.0",
-    "redux-saga": "^1.0.1",
+    "babel-helper-evaluate-path": "^0.5.0",
+    "babel-preset-minify": "^0.5.0",
     "getstream": "^4.2.0",
+    "redux-saga": "^1.0.1",
     "rimraf": "2.6.3"
   },
   "peerDependencies": {
-    "redux-saga": "^1.0.1",
-    "getstream": "^4.2.0"
+    "getstream": "^4.2.0",
+    "redux-saga": "^1.0.1"
   },
   "dependencies": {
     "@babel/runtime": "7.2.0"
