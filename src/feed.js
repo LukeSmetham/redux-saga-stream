@@ -6,8 +6,8 @@ function * addActivity(feedGroup, feedID, postData) {
   return yield call([feed, feed.addActivity], postData);
 }
 
-function createFeedChannel(feedGroup, feedID) {
-  const feed = this.client.feed(feedGroup, spaceID);
+function channel(feedGroup, feedID) {
+  const feed = this.client.feed(feedGroup, feedID);
 
   return eventChannel(emit => {
     const subscription = feed.subscribe(emit);
@@ -32,6 +32,6 @@ function * get(feedGroup, feedID, opts = {}) {
 
 export default {
   addActivity,
-  createFeedChannel,
+  channel,
   get,
 }
