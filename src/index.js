@@ -7,7 +7,7 @@ class ReduxSagaStream {
 
   constructor(key, token, id) {
 
-    this.client = stream.connect(key, token, id);
+    this.client = getstream.connect(key, token, id);
 
     this.feed = {
       addActivity: feed.addActivity.bind(this),
