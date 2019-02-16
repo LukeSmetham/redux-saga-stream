@@ -25,7 +25,13 @@ function createFeedChannel(feedGroup, feedID) {
   })
 }
 
+function * get(feedGroup, feedID, opts = {}) {
+  const feed = this.client.feed(feedGroup, feedID, this.userToken);
+  return yield call([feed, feed.get], opts)
+}
+
 export default {
   addActivity,
   createFeedChannel,
+  get,
 }

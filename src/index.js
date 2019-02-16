@@ -13,6 +13,7 @@ class ReduxSagaStream {
     this.feed = {
       addActivity: feed.addActivity.bind(this),
       createFeedChannel: feed.createFeedChannel.bind(this),
+      get: feed.get.bind(this),
     }
 
     this.collections = {
