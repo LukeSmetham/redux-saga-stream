@@ -15,7 +15,7 @@ class ReduxSagaStream {
       createFeedChannel: feed.createFeedChannel.bind(this),
     }
 
-    tihs.collections = {
+    this.collections = {
       add: collections.addCollectionEntry.bind(this),
     }
   }
