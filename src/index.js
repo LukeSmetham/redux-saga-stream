@@ -2,6 +2,7 @@ import getstream from 'getstream';
 
 // Modules //
 import feed from './feed';
+import collections from './collections';
 
 class ReduxSagaStream {
 
@@ -12,6 +13,10 @@ class ReduxSagaStream {
     this.feed = {
       addActivity: feed.addActivity.bind(this),
       createFeedChannel: feed.createFeedChannel.bind(this),
+    }
+
+    tihs.collections = {
+      add: collections.addCollectionEntry.bind(this),
     }
   }
 
