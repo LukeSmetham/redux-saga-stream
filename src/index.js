@@ -1,14 +1,15 @@
-import getstream from 'getstream';
+import stream from 'getstream';
 
 // Modules //
 import feed from './feed';
 import collections from './collections';
+import currentUser from './currentUser';
 
 class ReduxSagaStream {
 
   constructor(key, token, id) {
 
-    this.client = getstream.connect(key, token, id);
+    this.client = stream.connect(key, token, id);
 
     this.feed = {
       addActivity: feed.addActivity.bind(this),
@@ -18,6 +19,10 @@ class ReduxSagaStream {
 
     this.collections = {
       add: collections.addCollectionEntry.bind(this),
+    }
+
+    this.currentUser = {
+        get: currentUser.getCurrentUser.bind(this),
     }
   }
 
