@@ -30,7 +30,7 @@ function * follow(feedGroup, feedID, followGroup, followID) {
     return yield call([feed, feed.follow], followGroup, followID)
 }
 
-function * following(feedGroup, feedId, opts) {
+function * following(feedGroup, feedID, opts = {}) {
     const feed = this.client.feed(feedGroup, feedID);
     return yield call([feed, feed.following], opts);
 }
