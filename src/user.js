@@ -4,3 +4,7 @@ function * getProfile(profileID) {
   const user = this.client.user(profileID);
   return yield call([user, user.profile]);
 }
+
+export default {
+    getProfile
+}
