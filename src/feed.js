@@ -30,6 +30,11 @@ function * follow(feedGroup, feedID, followGroup, followID) {
     return yield call([feed, feed.follow], followGroup, followID)
 }
 
+function * following(feedGroup, feedId, opts) {
+    const feed = this.client.feed(feedGroup, feedID);
+    return yield call([feed, feed.following], opts);
+}
+
 function * get(feedGroup, feedID, opts = {}) {
   const feed = this.client.feed(feedGroup, feedID, this.userToken);
   return yield call([feed, feed.get], opts)
@@ -39,5 +44,6 @@ export default {
   addActivity,
   channel,
   follow,
+  following,
   get,
 }
