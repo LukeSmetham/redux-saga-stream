@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-stream",
-  "version": "0.0.18",
+  "version": "0.0.20",
   "description": "redux-saga integration for stream",
   "main": "dist/index.js",
   "files": [
