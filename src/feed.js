@@ -54,4 +54,5 @@ export default {
   follow,
   following,
   get,
+  unfollow,
 }
