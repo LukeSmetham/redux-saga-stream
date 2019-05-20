@@ -30,13 +30,21 @@ function * follow(feedGroup, feedID, followGroup, followID) {
     return yield call([feed, feed.follow], followGroup, followID)
 }
 
+/*
+* Unfollow a feed
+*/
+function * unfollow(feedGroup, feedID, followGroup, followID) {
+    const feed = this.client.feed(feedGroup, feedID);
+    return yield call([feed, feed.unfollow], followGroup, followID)
+}
+
 function * following(feedGroup, feedID, opts = {}) {
     const feed = this.client.feed(feedGroup, feedID);
     return yield call([feed, feed.following], opts);
 }
 
 function * get(feedGroup, feedID, opts = {}) {
-  const feed = this.client.feed(feedGroup, feedID, this.userToken);
+  const feed = this.client.feed(feedGroup, feedID);
   return yield call([feed, feed.get], opts)
 }
 
