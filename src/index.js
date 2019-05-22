@@ -4,6 +4,7 @@ import stream from 'getstream';
 import feed from './feed';
 import collections from './collections';
 import currentUser from './currentUser';
+import upload from './upload';
 import user from './user';
 
 class ReduxSagaStream {
@@ -27,6 +28,11 @@ class ReduxSagaStream {
 
         this.currentUser = {
             get: currentUser.getCurrentUser.bind(this),
+        }
+
+        this.upload = {
+            file: upload.uploadFile.bind(this),
+            image: upload.uploadImage.bind(this),
         }
 
         this.user = {
