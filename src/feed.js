@@ -48,11 +48,17 @@ function * get(feedGroup, feedID, opts = {}) {
   return yield call([feed, feed.get], opts)
 }
 
+function * getActivityDetail(feedGroup, feedID, activityID, opts = {}) {
+    const feed = this.client.feed(feedGroup, feedID);
+    return yield call([feed, feed.getActivityDetail], activityID, opts)
+}
+
 export default {
   addActivity,
   channel,
   follow,
   following,
   get,
+  getActivityDetail,
   unfollow,
 }

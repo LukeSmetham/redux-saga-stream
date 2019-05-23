@@ -19,6 +19,7 @@ class ReduxSagaStream {
             follow: feed.follow.bind(this),
             following: feed.following.bind(this),
             get: feed.get.bind(this),
+            getActivityDetail: feed.getActivityDetail.bind(this),
             unfollow: feed.unfollow.bind(this),
         }
 
