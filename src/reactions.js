@@ -11,6 +11,12 @@ function * add(activityID, type, data = {}, opts = {}) {
   return yield call([reactions, reactions.add], type, activityID, data, opts);
 }
 
+function * delete(reactionId) {
+  const reactions = this.client.reactions;
+  return yield call([reactions, reactions.delete], reactionId);
+}
+
 export default {
-    add
+    add,
+    delete
 }

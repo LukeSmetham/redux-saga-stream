@@ -34,6 +34,7 @@ class ReduxSagaStream {
 
         this.reactions = {
             add: reactions.add.bind(this),
+            delete: reactions.delete.bind(this),
         }
 
         this.upload = {
