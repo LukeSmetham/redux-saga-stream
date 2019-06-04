@@ -25,7 +25,7 @@ function channel(feedGroup, feedID) {
   })
 }
 
-function removeActivity(foreign_id) {
+function * removeActivity(foreign_id) {
     const feed = this.client.feed(feedGroup, feedID);
     return yield call([feed, feed.removeActivity], foreign_id);
 }

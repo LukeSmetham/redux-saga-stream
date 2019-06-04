@@ -1,37 +1,40 @@
 Arguments: 
-  /Users/lukesmetham/.nvm/versions/node/v11.6.0/bin/node /usr/local/Cellar/yarn/1.9.4/libexec/bin/yarn.js publish
+  /Users/lukesmetham/.nvm/versions/node/v11.15.0/bin/node /usr/local/Cellar/yarn/1.16.0/libexec/bin/yarn.js publish
 
 PATH: 
-  /Users/lukesmetham/.nvm/versions/node/v11.6.0/bin:/Users/lukesmetham/google-cloud-sdk/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+  /Users/lukesmetham/.nvm/versions/node/v11.15.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 Yarn version: 
-  1.9.4
+  1.16.0
 
 Node version: 
-  11.6.0
+  11.15.0
 
 Platform: 
   darwin x64
 
 Trace: 
   Error: canceled
-      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.9.4/libexec/lib/cli.js:126002:13)
-      at Interface.emit (events.js:188:13)
-      at Interface._ttyWrite (readline.js:799:16)
-      at ReadStream.onkeypress (readline.js:184:10)
-      at ReadStream.emit (events.js:188:13)
+      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.16.0/libexec/lib/cli.js:125850:13)
+      at Interface.emit (events.js:193:13)
+      at Interface._ttyWrite (readline.js:826:16)
+      at ReadStream.onkeypress (readline.js:183:10)
+      at ReadStream.emit (events.js:193:13)
       at emitKeys (internal/readline.js:424:14)
       at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1071:36)
-      at ReadStream.emit (events.js:188:13)
-      at addChunk (_stream_readable.js:288:12)
+      at ReadStream.onData (readline.js:1097:36)
+      at ReadStream.emit (events.js:193:13)
+      at addChunk (_stream_readable.js:295:12)
 
 npm manifest: 
   {
     "name": "redux-saga-stream",
-    "version": "0.0.12",
+    "version": "0.0.28",
     "description": "redux-saga integration for stream",
     "main": "dist/index.js",
+    "files": [
+      "dist"
+    ],
     "scripts": {
       "del": "rimraf dist",
       "build": "yarn del && NODE_ENV=production babel src --out-dir dist",
