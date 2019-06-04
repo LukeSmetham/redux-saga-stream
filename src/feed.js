@@ -25,9 +25,15 @@ function channel(feedGroup, feedID) {
   })
 }
 
-function * removeActivity(foreign_id) {
+/*
+* Remove an activity
+*
+* toRemove can be an activity ID, or an object containing
+* foreignId
+*/
+function * removeActivity(feedGroup, feedID, toRemove) {
     const feed = this.client.feed(feedGroup, feedID);
-    return yield call([feed, feed.removeActivity], foreign_id);
+    return yield call([feed, feed.removeActivity], toRemove);
 }
 
 function * follow(feedGroup, feedID, followGroup, followID) {
