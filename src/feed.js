@@ -65,5 +65,6 @@ export default {
   following,
   get,
   getActivityDetail,
+  removeActivity,
   unfollow,
 }
